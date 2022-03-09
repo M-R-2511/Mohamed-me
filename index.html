@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8f311fc98b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Menna</title>
+  </head>
+    <aside>
+      <nav>
+        <div class="me">
+          <img src="/img/pro.jpg" alt="profile" />
+          <h2>Mohamed</h2>
+          <h4>Front-End Developer</h4>
+        </div>
+
+        <!-- ========= Menu =========== -->
+        <ul class="menu">
+          <li onclick="active(this)" class="active home">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              Welcome
+            </a>
+          </li>
+          <li class="about" onclick="active(this)">
+            <a href="#about">
+              <i class="fa fa-pencil"></i>
+              About me
+            </a>
+          </li>
+          <li class="gallery" onclick="active(this)">
+            <a href="#gallery">
+              <i class="fa fa-paperclip"></i>
+              my gallery
+            </a>
+          </li>
+          <li class="contact" onclick="active(this)">
+            <a href="#contact">
+              <i class="fa fa-link"></i>
+              contact me
+            </a>
+          </li>
+        </ul>
+
+        <!-- ======== Icons ======== -->
+        <div class="icons">
+          <ul>
+            <li><i class="fa fa-facebook"></i></li>
+            <li><i class="fa fa-twitter"></i></li>
+            <li><i class="fa fa-linkedin"></i></li>
+            <li><i class="fa fa-google-plus"></i></li>
+            <li><i class="fa fa-youtube"></i></li>
+            <li><i class="fa fa-rss"></i></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+    <!-- ============== header ============== -->
+    <main>
+      <header>
+        <article>
+          <h1 class="text-header">Simple Design | Personal Portfolio</h1>
+          <p class="text-header">
+          This is a mobile friendly layout with Bootstrap v3.3.1 framework.
+          Maecenas eu ante at nunc posuere fringilla sit amet non dolor. Proin
+          condimentum fermentum nunc.
+        </p>
+      </article>
+      </header>
+
+      <!-- ============== About ==============-->
+      <section id="about">
+        <h2>LEARN ABOUT ME</h2>
+        <img
+          src="/img/8.jpg"
+          style="object-fit: contain; object-position: center"
+          alt="About"
+        />
+        <p>
+          Volton is free website design from
+          <span style="color: #017eb8">templat</span
+          ><span style="color: #00a873">emo</span>. You can use this template
+          for any purpose. Please tell your friends about it. Thank you. Credit
+          goes to <a href="#" style="color: #017eb8">Unsplash</a> for images
+          used in this design. You can <strong>change menu icons</strong> by
+          checking <a href="#" style="color: #017eb8">Font Awesome</a>
+          (version 4). Example:
+          <strong>< i class="fa fa-camera">< /i></strong>
+        </p>
+      </section>
+
+      <!-- ============== Gallery ============== -->
+      <section id="gallery">
+        <h2>PHOTOS OF WHAT I DO</h2>
+        <p>
+          Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi
+          accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare
+          odio. Maecenas et lorem molestie, maximus justo dignissim, cursus
+          nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer
+          lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.
+        </p>
+        <div class="images">
+          <div>
+            <img src="img/1.jpg" alt="" />
+          </div>
+          <div>
+            <img src="img/2.jpg" alt="" />
+          </div>
+          <div>
+            <img src="img/3.jpg" alt="" />
+          </div>
+          <div>
+            <img src="img/4.jpg" alt="" />
+          </div>
+          <div>
+            <img src="img/5.jpg" alt="" />
+          </div>
+          <div>
+            <img src="img/6.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== Contact Us ============== -->
+      <section id="contact">
+        <h2>PLACE TO TALK WITH ME</h2>
+        <p>
+          Vestibulum ac iaculis erat, in semper dolor. Maecenas et lorem
+          molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex
+          pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem
+          sit amet, imperdiet condimentum diam.
+        </p>
+        <form>
+          <input
+            type="text"
+            placeholder="Your Name..."
+            name="full-name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email..."
+            required
+          />
+          <input type="text" name="subject" placeholder="Subject..." />
+          <textarea
+            name="message"
+            placeholder="Leave your message..."
+          ></textarea>
+          <button>send message</button>
+        </form>
+      </section>
+      <footer>
+        <p>Copyright © 2015 Company Name</p>
+      </footer>
+    </main>
+  </body>
+  <script>
+    let home = document.querySelector(".home")
+    let about = document.querySelector(".about")
+    let gallery = document.querySelector(".gallery")
+    let contact = document.querySelector(".contact")
+    function active(e) {
+      if(e === home) {
+        about.classList.remove("active")
+        gallery.classList.remove("active")
+        contact.classList.remove("active")
+        e.classList.add("active")
+      }
+      else if(e === about) {
+        home.classList.remove("active")
+        gallery.classList.remove("active")
+        contact.classList.remove("active")
+        e.classList.add("active")
+      }
+      else if(e === gallery) {
+        home.classList.remove("active")
+        about.classList.remove("active")
+        contact.classList.remove("active")
+        e.classList.add("active")
+      } else {
+        home.classList.remove("active")
+        about.classList.remove("active")
+        gallery.classList.remove("active")
+        e.classList.add("active")
+        
+      }
+    }
+  </script>
+</html>
