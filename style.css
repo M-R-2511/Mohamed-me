@@ -292,6 +292,7 @@ footer {
   }
   #gallery .images > div {
     width: 100%;
+    margin-inline: auto;
   }
 
   #gallery .images > div::after {
